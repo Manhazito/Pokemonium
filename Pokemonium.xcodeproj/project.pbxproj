@@ -1,0 +1,612 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D4E707C12B74FFF200673003 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E707C02B74FFF200673003 /* AppDelegate.swift */; };
+		D4E707C32B74FFF200673003 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E707C22B74FFF200673003 /* SceneDelegate.swift */; };
+		D4E707C52B74FFF200673003 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E707C42B74FFF200673003 /* ViewController.swift */; };
+		D4E707C82B74FFF200673003 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4E707C62B74FFF200673003 /* Main.storyboard */; };
+		D4E707CA2B74FFF500673003 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4E707C92B74FFF500673003 /* Assets.xcassets */; };
+		D4E707CD2B74FFF500673003 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4E707CB2B74FFF500673003 /* LaunchScreen.storyboard */; };
+		D4E707D82B74FFF600673003 /* PokemoniumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E707D72B74FFF600673003 /* PokemoniumTests.swift */; };
+		D4E707E22B74FFF600673003 /* PokemoniumUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E707E12B74FFF600673003 /* PokemoniumUITests.swift */; };
+		D4E707E42B74FFF600673003 /* PokemoniumUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E707E32B74FFF600673003 /* PokemoniumUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D4E707D42B74FFF600673003 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4E707B52B74FFF200673003 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D4E707BC2B74FFF200673003;
+			remoteInfo = Pokemonium;
+		};
+		D4E707DE2B74FFF600673003 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4E707B52B74FFF200673003 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D4E707BC2B74FFF200673003;
+			remoteInfo = Pokemonium;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D4E707BD2B74FFF200673003 /* Pokemonium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pokemonium.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4E707C02B74FFF200673003 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D4E707C22B74FFF200673003 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D4E707C42B74FFF200673003 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D4E707C72B74FFF200673003 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D4E707C92B74FFF500673003 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D4E707CC2B74FFF500673003 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D4E707CE2B74FFF500673003 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4E707D32B74FFF600673003 /* PokemoniumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokemoniumTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4E707D72B74FFF600673003 /* PokemoniumTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemoniumTests.swift; sourceTree = "<group>"; };
+		D4E707DD2B74FFF600673003 /* PokemoniumUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokemoniumUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4E707E12B74FFF600673003 /* PokemoniumUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemoniumUITests.swift; sourceTree = "<group>"; };
+		D4E707E32B74FFF600673003 /* PokemoniumUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemoniumUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D4E707BA2B74FFF200673003 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4E707D02B74FFF600673003 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4E707DA2B74FFF600673003 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D4E707B42B74FFF200673003 = {
+			isa = PBXGroup;
+			children = (
+				D4E707BF2B74FFF200673003 /* Pokemonium */,
+				D4E707D62B74FFF600673003 /* PokemoniumTests */,
+				D4E707E02B74FFF600673003 /* PokemoniumUITests */,
+				D4E707BE2B74FFF200673003 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D4E707BE2B74FFF200673003 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D4E707BD2B74FFF200673003 /* Pokemonium.app */,
+				D4E707D32B74FFF600673003 /* PokemoniumTests.xctest */,
+				D4E707DD2B74FFF600673003 /* PokemoniumUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D4E707BF2B74FFF200673003 /* Pokemonium */ = {
+			isa = PBXGroup;
+			children = (
+				D4E707C02B74FFF200673003 /* AppDelegate.swift */,
+				D4E707C22B74FFF200673003 /* SceneDelegate.swift */,
+				D4E707C42B74FFF200673003 /* ViewController.swift */,
+				D4E707C62B74FFF200673003 /* Main.storyboard */,
+				D4E707C92B74FFF500673003 /* Assets.xcassets */,
+				D4E707CB2B74FFF500673003 /* LaunchScreen.storyboard */,
+				D4E707CE2B74FFF500673003 /* Info.plist */,
+			);
+			path = Pokemonium;
+			sourceTree = "<group>";
+		};
+		D4E707D62B74FFF600673003 /* PokemoniumTests */ = {
+			isa = PBXGroup;
+			children = (
+				D4E707D72B74FFF600673003 /* PokemoniumTests.swift */,
+			);
+			path = PokemoniumTests;
+			sourceTree = "<group>";
+		};
+		D4E707E02B74FFF600673003 /* PokemoniumUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D4E707E12B74FFF600673003 /* PokemoniumUITests.swift */,
+				D4E707E32B74FFF600673003 /* PokemoniumUITestsLaunchTests.swift */,
+			);
+			path = PokemoniumUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D4E707BC2B74FFF200673003 /* Pokemonium */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4E707E72B74FFF600673003 /* Build configuration list for PBXNativeTarget "Pokemonium" */;
+			buildPhases = (
+				D4E707B92B74FFF200673003 /* Sources */,
+				D4E707BA2B74FFF200673003 /* Frameworks */,
+				D4E707BB2B74FFF200673003 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Pokemonium;
+			productName = Pokemonium;
+			productReference = D4E707BD2B74FFF200673003 /* Pokemonium.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D4E707D22B74FFF600673003 /* PokemoniumTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4E707EA2B74FFF600673003 /* Build configuration list for PBXNativeTarget "PokemoniumTests" */;
+			buildPhases = (
+				D4E707CF2B74FFF600673003 /* Sources */,
+				D4E707D02B74FFF600673003 /* Frameworks */,
+				D4E707D12B74FFF600673003 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D4E707D52B74FFF600673003 /* PBXTargetDependency */,
+			);
+			name = PokemoniumTests;
+			productName = PokemoniumTests;
+			productReference = D4E707D32B74FFF600673003 /* PokemoniumTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D4E707DC2B74FFF600673003 /* PokemoniumUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4E707ED2B74FFF600673003 /* Build configuration list for PBXNativeTarget "PokemoniumUITests" */;
+			buildPhases = (
+				D4E707D92B74FFF600673003 /* Sources */,
+				D4E707DA2B74FFF600673003 /* Frameworks */,
+				D4E707DB2B74FFF600673003 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D4E707DF2B74FFF600673003 /* PBXTargetDependency */,
+			);
+			name = PokemoniumUITests;
+			productName = PokemoniumUITests;
+			productReference = D4E707DD2B74FFF600673003 /* PokemoniumUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D4E707B52B74FFF200673003 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					D4E707BC2B74FFF200673003 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					D4E707D22B74FFF600673003 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = D4E707BC2B74FFF200673003;
+					};
+					D4E707DC2B74FFF600673003 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = D4E707BC2B74FFF200673003;
+					};
+				};
+			};
+			buildConfigurationList = D4E707B82B74FFF200673003 /* Build configuration list for PBXProject "Pokemonium" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D4E707B42B74FFF200673003;
+			productRefGroup = D4E707BE2B74FFF200673003 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D4E707BC2B74FFF200673003 /* Pokemonium */,
+				D4E707D22B74FFF600673003 /* PokemoniumTests */,
+				D4E707DC2B74FFF600673003 /* PokemoniumUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D4E707BB2B74FFF200673003 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4E707CD2B74FFF500673003 /* LaunchScreen.storyboard in Resources */,
+				D4E707CA2B74FFF500673003 /* Assets.xcassets in Resources */,
+				D4E707C82B74FFF200673003 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4E707D12B74FFF600673003 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4E707DB2B74FFF600673003 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D4E707B92B74FFF200673003 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4E707C52B74FFF200673003 /* ViewController.swift in Sources */,
+				D4E707C12B74FFF200673003 /* AppDelegate.swift in Sources */,
+				D4E707C32B74FFF200673003 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4E707CF2B74FFF600673003 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4E707D82B74FFF600673003 /* PokemoniumTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4E707D92B74FFF600673003 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4E707E42B74FFF600673003 /* PokemoniumUITestsLaunchTests.swift in Sources */,
+				D4E707E22B74FFF600673003 /* PokemoniumUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D4E707D52B74FFF600673003 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D4E707BC2B74FFF200673003 /* Pokemonium */;
+			targetProxy = D4E707D42B74FFF600673003 /* PBXContainerItemProxy */;
+		};
+		D4E707DF2B74FFF600673003 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D4E707BC2B74FFF200673003 /* Pokemonium */;
+			targetProxy = D4E707DE2B74FFF600673003 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D4E707C62B74FFF200673003 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4E707C72B74FFF200673003 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D4E707CB2B74FFF500673003 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4E707CC2B74FFF500673003 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D4E707E52B74FFF600673003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D4E707E62B74FFF600673003 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D4E707E82B74FFF600673003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5CSC8SG2GH;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Pokemonium/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = net.filiperamos.Pokemonium;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D4E707E92B74FFF600673003 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5CSC8SG2GH;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Pokemonium/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = net.filiperamos.Pokemonium;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D4E707EB2B74FFF600673003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5CSC8SG2GH;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = net.filiperamos.PokemoniumTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pokemonium.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Pokemonium";
+			};
+			name = Debug;
+		};
+		D4E707EC2B74FFF600673003 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5CSC8SG2GH;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = net.filiperamos.PokemoniumTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pokemonium.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Pokemonium";
+			};
+			name = Release;
+		};
+		D4E707EE2B74FFF600673003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5CSC8SG2GH;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = net.filiperamos.PokemoniumUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Pokemonium;
+			};
+			name = Debug;
+		};
+		D4E707EF2B74FFF600673003 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5CSC8SG2GH;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = net.filiperamos.PokemoniumUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Pokemonium;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D4E707B82B74FFF200673003 /* Build configuration list for PBXProject "Pokemonium" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4E707E52B74FFF600673003 /* Debug */,
+				D4E707E62B74FFF600673003 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4E707E72B74FFF600673003 /* Build configuration list for PBXNativeTarget "Pokemonium" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4E707E82B74FFF600673003 /* Debug */,
+				D4E707E92B74FFF600673003 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4E707EA2B74FFF600673003 /* Build configuration list for PBXNativeTarget "PokemoniumTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4E707EB2B74FFF600673003 /* Debug */,
+				D4E707EC2B74FFF600673003 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4E707ED2B74FFF600673003 /* Build configuration list for PBXNativeTarget "PokemoniumUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4E707EE2B74FFF600673003 /* Debug */,
+				D4E707EF2B74FFF600673003 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D4E707B52B74FFF200673003 /* Project object */;
+}
