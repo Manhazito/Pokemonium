@@ -37,4 +37,16 @@ open class MainCoordinator: NSObject, Coordinator {
         guard let childIdx = parent.children.firstIndex(where: { $0 === self }) else { return }
         parent.children.remove(at: childIdx)
     }
+    
+    func showError(_ error: Error, callback: @escaping () -> Void) {
+        let title = "Something went wrong"
+        let message = error.localizedDescription
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+
+        alert.addAction(UIAlertAction(title: "Retry", style: .default, handler: { _ in
+            callback()
+        }))
+
+        rootViewController?.present(alert, animated: true)
+    }
 }

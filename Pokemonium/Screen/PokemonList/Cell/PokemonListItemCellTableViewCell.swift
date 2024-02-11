@@ -14,7 +14,9 @@ class PokemonListItemCellTableViewCell: UITableViewCell {
     @IBOutlet weak var pictureImageView: UIImageView! {
         didSet { pictureImageView.image = placeholderImage }
     }
-    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel! {
+        didSet { nameLabel.text = "" }
+    }
     
     // MARK: - Private properties
     private let placeholderImage = UIImage(named: "pokeball_s")

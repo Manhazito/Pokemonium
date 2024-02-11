@@ -14,9 +14,13 @@ protocol PokemonListPresenterDelegate: AnyObject {
 }
 
 class PokemonListPresenter: Coordinated, PokemonListViewDelegate {
+    
     var coordinator: Coordinator?
     weak var delegate: PokemonListPresenterDelegate?
     
+    private lazy var navigationDelegate: PokemonListCoordinatorDelegate? = self.coordinator as? PokemonListCoordinatorDelegate
+    private lazy var errorHandlingDelegate: ErrorHandlingProtocol? = self.coordinator as? ErrorHandlingProtocol
+
     private var repository: PokemonRepositoryProtocol
     private var bag = Set<AnyCancellable>()
     
@@ -40,7 +44,7 @@ class PokemonListPresenter: Coordinated, PokemonListViewDelegate {
             .sink { completion in
                 if case let .failure(error) = completion {
                     self.loading = false
-                    (self.coordinator as? PokemonListCoordinatorDelegate)?.showError(error) {
+                    self.errorHandlingDelegate?.showError(error) {
                         self.fetchData()
                     }
                 }
@@ -65,5 +69,11 @@ class PokemonListPresenter: Coordinated, PokemonListViewDelegate {
     
     func fill(cell: PokemonListItemCellTableViewCell, with pokemonItem: PokemonItem) {
         cell.setup(with: pokemonItem)
+    }
+    
+    func selected(row: Int) {
+        guard pokemons.indices.contains(row) else { return }
+        let pokemonName = self.pokemons[row].name
+        self.navigationDelegate?.showPokemonDetails(for: pokemonName)
     }
 }

@@ -10,9 +10,12 @@ import Combine
 
 protocol PokemonRepositoryProtocol {
     func getPokemonsList(page: Int) -> AnyPublisher<[PokemonItem], Error>
+    func getPokemon(named: String) -> AnyPublisher<PokemonData, Error>
 }
 
 class PokemonRepository: PokemonRepositoryProtocol {
+    
+    // MARK: - PokemonRepositoryProtocol functions
     
     func getPokemonsList(page: Int) -> AnyPublisher<[PokemonItem], Error> {
         getPokemons(page: page)
@@ -24,6 +27,23 @@ class PokemonRepository: PokemonRepositoryProtocol {
             }
             .eraseToAnyPublisher()
     }
+    
+    func getPokemon(named: String) -> AnyPublisher<PokemonData, Error> {
+        getPokemon(named)
+            .map { pokemon in
+                PokemonData(name: pokemon.name,
+                            imageUrl: pokemon.imageUrl,
+                            heightMeters: pokemon.heightMeters,
+                            weightKg: pokemon.weightKg,
+                            experience: "\(pokemon.baseExperience)",
+                            rarity: pokemon.heldItems.first?.versionDetails.first?.rarity ?? 1,
+                            species: pokemon.species.name,
+                            type: PokemonType(rawValue: pokemon.types.first?.type.name ?? "") ?? .unknown)
+            }
+            .eraseToAnyPublisher()
+    }
+    
+    // MARK: - Private functions
 
     private func getPokemons(page: Int) -> AnyPublisher<[PokemonListItem], Error> {
         guard let url = URL(string: ApiConfig.pokemonListUrl(page: page)) else {
@@ -57,8 +77,8 @@ class PokemonRepository: PokemonRepositoryProtocol {
             .eraseToAnyPublisher()
     }
     
-    private func getPokemon(_ item: PokemonListItem) -> AnyPublisher<Pokemon, Error> {
-        guard let url = URL(string: ApiConfig.pokemonDetailsUrl(item.name)) else {
+    private func getPokemon(_ name: String) -> AnyPublisher<Pokemon, Error> {
+        guard let url = URL(string: ApiConfig.pokemonDetailsUrl(name)) else {
             return Fail(error: URLError(.badURL)).eraseToAnyPublisher()
         }
 
@@ -78,5 +98,9 @@ class PokemonRepository: PokemonRepositoryProtocol {
             }
             .decode(type: Pokemon.self, decoder: decoder)
             .eraseToAnyPublisher()
+    }
+    
+    private func getPokemon(_ item: PokemonListItem) -> AnyPublisher<Pokemon, Error> {
+        getPokemon(item.name)
     }
 }

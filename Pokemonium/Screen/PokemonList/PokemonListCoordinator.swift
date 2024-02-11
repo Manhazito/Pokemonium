@@ -8,10 +8,10 @@
 import UIKit
 
 protocol PokemonListCoordinatorDelegate: AnyObject {
-    func showError(_ error: Error, callback: @escaping () -> Void)
+    func showPokemonDetails(for name: String)
 }
 
-final class PokemonListCoordinator: MainCoordinator, PokemonListCoordinatorDelegate {
+final class PokemonListCoordinator: MainCoordinator, PokemonListCoordinatorDelegate, ErrorHandlingProtocol {
     
     init(parent: Coordinator) {
         super.init(rootViewController: parent.rootViewController)
@@ -24,15 +24,8 @@ final class PokemonListCoordinator: MainCoordinator, PokemonListCoordinatorDeleg
         rootViewController?.pushViewController(viewController, animated: true)
     }
     
-    func showError(_ error: Error, callback: @escaping () -> Void) {
-        let title = "Something went wrong"
-        let message = error.localizedDescription
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-
-        alert.addAction(UIAlertAction(title: "Retry", style: .default, handler: { _ in
-            callback()
-        }))
-
-        rootViewController?.present(alert, animated: true)
+    func showPokemonDetails(for name: String) {
+        let coordinator = PokemonDetailsCoordinator(parent: self, pokemonName: name)
+        push(child: coordinator)
     }
 }

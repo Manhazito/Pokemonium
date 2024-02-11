@@ -11,9 +11,12 @@ struct Pokemon: Decodable {
     let id: Int
     let name: String
     let baseExperience: Int
-    let height: Int // hectograms
+    let height: Int // decimetres
+    let weight: Int // hectograms
     let sprites: Sprites
     let types: [PokeTypeContainer]
+    let species: Named
+    let heldItems: [HeldItem]
 }
 
 struct Sprites: Decodable {
@@ -21,10 +24,18 @@ struct Sprites: Decodable {
 }
 
 struct PokeTypeContainer: Decodable {
-    let type: PokeType
+    let type: Named
 }
 
-struct PokeType: Decodable {
+struct HeldItem: Decodable {
+    let versionDetails: [VersionDetails]
+}
+
+struct VersionDetails: Decodable {
+    let rarity: Int
+}
+
+struct Named: Decodable {
     let name: String
 }
 
@@ -32,6 +43,6 @@ extension Pokemon {
     var imageUrl: String {
         sprites.frontDefault
     }
-    
-    var heightKg: Double { Double(height) / 10 }
+    var weightKg: Double { Double(weight) / 10 }
+    var heightMeters: Double { Double(height) / 10 }
 }

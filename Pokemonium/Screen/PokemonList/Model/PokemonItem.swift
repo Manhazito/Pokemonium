@@ -7,28 +7,6 @@
 
 import UIKit
 
-enum PokemonType: String {
-    case ground
-    case bug
-    case dark
-    case dragon
-    case electric
-    case fairy
-    case fighting
-    case fire
-    case flying
-    case ghost
-    case grass
-    case ice
-    case normal
-    case poison
-    case psychic
-    case rock
-    case steel
-    case water
-    case unknown
-}
-
 struct PokemonItem: Hashable {
     let name: String
     let imageUrl: String
@@ -36,10 +14,6 @@ struct PokemonItem: Hashable {
 }
 
 extension PokemonItem {
-    var typeImage: String {
-        "\(type.rawValue)_type"
-    }
-    
     var typeColor: UIColor {
         UIColor(named: "\(type.rawValue)Color") ?? .white
     }

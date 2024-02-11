@@ -11,11 +11,11 @@ protocol PokemonListViewDelegate: AnyObject {
     var delegate: PokemonListPresenterDelegate? { get set }
     func fill(cell: PokemonListItemCellTableViewCell, with pokemonItem: PokemonItem)
     func willDisplay(row: Int)
+    func selected(row: Int)
 }
 
 class PokemonListViewController: UITableViewController, PokemonListPresenterDelegate {
     var presenter: PokemonListViewDelegate?
-    var repository: PokemonRepositoryProtocol?
     
     private lazy var dataSource: UITableViewDiffableDataSource<Int, PokemonItem> = makeDataSource()
 
@@ -59,9 +59,15 @@ class PokemonListViewController: UITableViewController, PokemonListPresenterDele
             return cell
         }
     }
+    
+    // MARK: - Table View delegate
 
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         presenter?.willDisplay(row: indexPath.row)
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter?.selected(row: indexPath.row)
     }
     
     // MARK: - PokemonListPresenterDelegate
