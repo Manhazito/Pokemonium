@@ -45,7 +45,21 @@ class PokemonRepository: PokemonRepositoryProtocol {
     
     // MARK: - Private functions
 
-    private func getPokemons(page: Int) -> AnyPublisher<[PokemonListItem], Error> {
+    private func getPokemons(in items: [PokemonListItem]) -> AnyPublisher<[Pokemon], Error> {
+        let publishers: [AnyPublisher<Pokemon, Error>] = items.map(getPokemon)
+        
+        return Publishers.MergeMany(publishers)
+            .collect(publishers.count)
+            .eraseToAnyPublisher()
+    }
+
+    private func getPokemon(_ item: PokemonListItem) -> AnyPublisher<Pokemon, Error> {
+        getPokemon(item.name)
+    }
+
+    // MARK: - API calls
+    
+    func getPokemons(page: Int) -> AnyPublisher<[PokemonListItem], Error> {
         guard let url = URL(string: ApiConfig.pokemonListUrl(page: page)) else {
             return Fail(error: URLError(.badURL)).eraseToAnyPublisher()
         }
@@ -69,15 +83,7 @@ class PokemonRepository: PokemonRepositoryProtocol {
             .eraseToAnyPublisher()
     }
     
-    private func getPokemons(in items: [PokemonListItem]) -> AnyPublisher<[Pokemon], Error> {
-        let publishers: [AnyPublisher<Pokemon, Error>] = items.map(getPokemon)
-        
-        return Publishers.MergeMany(publishers)
-            .collect(publishers.count)
-            .eraseToAnyPublisher()
-    }
-    
-    private func getPokemon(_ name: String) -> AnyPublisher<Pokemon, Error> {
+    func getPokemon(_ name: String) -> AnyPublisher<Pokemon, Error> {
         guard let url = URL(string: ApiConfig.pokemonDetailsUrl(name)) else {
             return Fail(error: URLError(.badURL)).eraseToAnyPublisher()
         }
@@ -100,7 +106,4 @@ class PokemonRepository: PokemonRepositoryProtocol {
             .eraseToAnyPublisher()
     }
     
-    private func getPokemon(_ item: PokemonListItem) -> AnyPublisher<Pokemon, Error> {
-        getPokemon(item.name)
-    }
 }
